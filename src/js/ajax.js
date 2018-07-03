@@ -1,7 +1,5 @@
 import $ from 'jquery';
 import CryptoJS from 'crypto-js';
-
-import mui from 'Lib/mui/js/mui.min';
 import api from 'JSCommon/api';
 import axios from 'axios';
 import qs from 'qs';
@@ -116,7 +114,7 @@ const ajax = {
           if (data.errcode === 0) {
             window.location.href = data.data.url;
           } else {
-            mui.alert(data.errmsg);
+            // mui.alert(data.errmsg);
           }
         },
       },
@@ -150,21 +148,6 @@ const ajax = {
       params: opt,
     });
   },
-  // 发送sticker请求
-  // reqSticker(opt) {
-  //   const url = `${host}Api/user/create`;
-  //   const oriData = {
-  //     id: opt.id,
-  //     token: opt.token,
-  //   };
-  //   const reqData = this.dataProcess.getReqData(oriData, opt.encryptionType, opt.token, true);
-
-  //   this.sendRequest({
-  //     url,
-  //     data: reqData,
-  //     params: opt,
-  //   });
-  // },
   reqSticker(opt) {
     const oriData = {
       id: opt.id,
